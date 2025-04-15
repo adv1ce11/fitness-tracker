@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'profile/styles.css' %}">
   <title>Профіль користувача</title>
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="profile-container">
     <div class="profile-header">
-      <img src="https://via.placeholder.com/150" alt="Avatar" class="profile-avatar">
+      <img src="{% static 'profile/images/avatar.jpg' %}" alt="{{ logo }}">
       <h1 class="profile-name">Ім'я користувача</h1>
       <p class="profile-email">email@example.com</p>
     </div>

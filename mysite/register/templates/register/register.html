@@ -1,23 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./images/ЛОГО.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{% static 'register/styles.css' %}">
     <title>MusclesUP</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="container">
-            <img src="/images/logo.png" alt="" class="logo">
+            <img src="{% static 'register/images/logo.png' %}" alt="{{ logo }}">
             <nav>
                 <ul>
-                    <li class="nav_text"><a href="">ГОЛОВНА</a></li>
-                    <li class="nav_text"><a href="#about">ПРО НАС</a></li>
-                    <li class="nav_text"><a href="#">ДЛЯ КОГО</a></li>
-                    <li class="nav_text"><a href="">МІЙ КАБІНЕТ</a></li>
-                    <li class="nav_btn"><a href="/register/register.html">РЕЄСТРАЦІЯ</a></li>
+                    <li class="nav_text"><a href="/">ГОЛОВНА</a></li>
+                    <li class="nav_text"><a href="/">ПРО НАС</a></li>
+                    <li class="nav_text"><a href="/">ДЛЯ КОГО</a></li>
+                    <li class="nav_text"><a href="/profile/profile.html">МІЙ КАБІНЕТ</a></li>
+                    <li class="nav_btn"><a href="">РЕЄСТРАЦІЯ</a></li>
                 </ul>
             </nav>
             <div class="hero-container">
@@ -46,7 +46,7 @@
     </div>
 
     <!-- Підключаємо зовнішній JavaScript файл наприкінці -->
-    <script src="/register/index.js"></script>
-
+    <script src="/index.js"></script>
+    <script src="{% static 'register/index.js' %}"></script>
 </body>
 </html>

@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@font-face {
+    font-family: 'Benzin';
+    src: url('/fonts/Benzin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Benzin Bold';
+    src: url('/fonts/Benzin-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Встановлення для preloader */
+.preloader {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /
+}
+
+/* Стиль для спінера */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #e1d300; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; 
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Забороняємо виділення тексту */
+* {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
+
+img {
+    pointer-events: none; 
+}
+
+html {
+    scroll-behavior: smooth; /* Плавний скролінг */
+}
+
+body {
+    font-family: "Benzin Bold", sans-serif;
+    font-weight: 700;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    color: #FEEF41;
+}
+
+.text-opacity {
+    color: transparent; 
+    -webkit-text-stroke: 2px white; 
+}
+.wrapper {
+    background-color: black;
+    height: 200vh; 
+}
+
+
+.container {
+    padding: 50px 0px;
+    width: 1680px;
+    margin: 0 auto;
+}
+
+
+header {
+    position: relative;
+    z-index: 10; 
+}
+header nav {
+    position: relative;
+    z-index: 11; 
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+    
+}
+
+/* Загальні стилі для всіх посилань */
+ul li a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    text-decoration: none; 
+    color: white;
+    font-size: 14px;
+}
+
+ul li a:hover {
+    color: #FEEF41;
+    font-weight: 700;
+}
+
+
+ul li.active a {
+    font-weight: 700; 
+}
+
+ul li.nav_btn a {
+    font-weight: 600; 
+    color: black;
+    letter-spacing: 5px; 
+    background-color: white;
+    padding: 25px 45px;
+    border-radius: 25px;
+}
+
+
+.hero--section {
+    width: 100%;
+    padding-top: 0px;
+    position: relative;
+    background-color: black;
+    min-height: 80vh;
+    
+}
+
+/* Текстова частина */
+.hero--info {
+    position: relative; 
+    z-index: 0; 
+    text-align: center;
+}
+
+/* Стиль для заголовків */
+.hero--info h2 {
+    font-size: 290px;
+    line-height: 0.9;
+    text-align: center;
+    margin: 0;
+    position: relative; 
+}
+
+/* Зображення */
+.man {
+    position: absolute; 
+    top: -20%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1; 
+    width: 500%; 
+    object-fit: contain; 
+}
+
+.text-opacity {
+    color: transparent; 
+    -webkit-text-stroke: 2px white; 
+    opacity: 0.2; 
+}
+
+.overlay-text {
+    position: absolute;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 80px; 
+    color: white;
+    
+    text-align: center;
+    z-index: 2; /* Текст поверх зображення */
+    font-family: "Benzin", sans-serif;
+    font-weight: 700; /* Regular */
+    color: white    ;
+}
+
+/* Текст "Кращим" */
+.overlay-text-small {
+    position: absolute;
+    top: 39%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 150px; 
+    color: #FEEF41;
+    font-family: 'Benzin', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    z-index: 2; 
+}
+
+/* Текст опису */
+.overlay-text-description {
+    position: absolute;
+    top: 65%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px; 
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    width: 40%; 
+    z-index: 2;
+    line-height: 1.4; 
+}
+.main_btn {
+    position: absolute;
+    top: 85%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white; /* Жовтий фон */
+    color: black; /* Чорний текст */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 27px 47px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 9996; /* Найвищий рівень (поверх усіх елементів) */
+    transition: background-color 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1.5px;
+}
+
+.main_btn:hover {
+    background-color: #FEEF41; /* Світліший жовтий при наведенні */
+}
+
+.result-card {
+    position: absolute;
+    bottom: 55px; /* Відступ від нижнього краю */
+    left: 0; /* Прив’язка до лівого краю */
+    width: 223px;
+    height: 350px;
+    background-color: white; /* Білий фон */
+    border-radius: 20px; /* Закруглені кути */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь для ефекту */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 100; /* Щоб бути над іншими елементами */
+    margin-left: 90px; /* Або точний відступ, щоб вирівняти під логотип */
+}
+
+/* Зображення всередині плашки */
+.result-image {
+    width: 200px;  /* Ширина 200px */
+    height: 200px; /* Висота 185px */
+    margin-top: 20px;
+    
+    
+}
+
+/* Текст на плашці */
+.result-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    line-height: 1.3;
+    position: relative;
+    top: -40px; /* Піднімаємо текст на 20px */
+    
+}
+
+.free-lesson-card {
+    position: absolute;
+    top: 250px; /* Відступ від верхнього краю */
+    right: 0; /* Прив'язка до правого краю */
+    margin-right: 95px;
+    width: 220px;
+    height: 220px;
+    background-color: white; /* Білий фон */
+    border-radius: 20px; /* Закруглені кути */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь для ефекту */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.big-number {
+    font-family: 'Benzin', sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    color: black;
+    margin: 0;
+}
+
+.small-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    line-height: 1.4;
+    margin-top: 10px;
+    
+}
+
+
+
+.about {
+    background-color: black; /* Чорний фон */
+    color: white; /* Білий текст */
+    padding: 50px 20px; /* Відступи */
+    text-align: center; /* Центровані елементи */
+    min-height: 200vh; /* Мінімальна висота, щоб блок займав весь екран */
+    
+}
+
+.about h1 {
+    position: absolute;
+    top: 120%; /* Відстань від верху сторінки (можна налаштувати) */
+    left: 21%; /* Відстань від лівого краю */
+    transform: translateX(-50%); /* Центрування по горизонталі */
+    color: #FEEF41; /* Жовтий колір для тексту */
+    font-size: 100px; /* Розмір шрифту */
+    font-family: "Benzin", sans-serif;
+    font-weight: 700;
+    z-index: 1000; /* Найвищий рівень */
+    text-align: center;
+}
+
+.yellow {
+    color: #FEEF41; /* Жовтий колір для "ПРО" */
+}
+
+.white {
+    color: white; /* Білий колір для "НАС" */
+}
+
+.opacity_about {
+    color: transparent; /* Прибираємо заливку */
+    -webkit-text-stroke: 1px white; /* Обведення тексту */
+    
+    font-family: 'Benzin', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 0; /* Забираємо верхній відступ */
+    margin-bottom: 20px; /* Можна налаштувати для бажаного простору знизу */
+    margin-left: 30px;
+    z-index: -999; /* Щоб текст був поверх інших елементів */
+    opacity: 0.1;
+
+    position: absolute; /* Позиціювання відносно найближчого батьківського контейнера з position: relative */
+    top: 25px; /* Відстань від верхнього краю */
+    left: 90%; /* Центрує текст по горизонталі */
+    transform: translateX(-50%); /* Виправляє положення по центру */
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+/* Підтекст */
+.hello-text {
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+    margin-top: 250px; /* Збільшуємо відступ зверху, щоб опустити текст вниз */
+    margin-left: 0px; /* Додаємо відступ зліва, щоб наблизити текст до лівого краю */
+    line-height: 1.6;
+    max-width: 80%;
+   
+}
+
+.about_gym1 {
+    position: absolute;
+    right: 5%;
+    top: 170%;
+    transform: translateY(-50%);
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0; /* Початково зображення невидиме */
+    transition: opacity 2s, transform 2s; /* Додаємо анімацію */
+}
+
+.about_gym1.visible {
+    opacity: 1;
+    transform: translateY(-50%) scale(1); /* Перехід до нормального стану */
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8); /* Зображення спочатку маленьке */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1); /* Зображення стає на місце */
+    }
+}
+
+
+/* Стиль для куба з "+" */
+.plus-cube {
+    position: absolute; /* Абсолютне позиціонування */
+    bottom: -550px; /* Опускаємо куб вниз (налаштуйте це значення, якщо потрібно) */
+    left: 90px; /* Переміщаємо куб правіше (налаштуйте це значення) */
+    width: 40px;
+    height: 40px;
+    background-color: #FEEF41; /* Жовтий фон */
+    color: black; /* Чорний текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Benzin', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999; /* Гарантує, що куб буде поверх інших елементів */
+}
+
+
+
+/* Зміна кольору куба при ховері */
+.plus-cube:hover {
+    background-color: #e1d300;
+}
+
+/* Стиль для додаткового тексту */
+.extra-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: left;
+    color: white;
+    line-height: 1.6;
+    display: none;
+    margin-top: 100px;
+    margin-left: 0px;
+    position: absolute;
+    z-index: 0; /* Забезпечує, щоб цей блок був позаду інших */
+}
+
+
+/* Анімація для появлення тексту */
+.extra-text.show {
+    display: block;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Анімація для появлення */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Основний текст "Я ВІРЮ" */
+.belief-text {
+    font-family: 'Benzin', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    text-align: left;
+    color: white;
+    margin-top: 40px; /* Збільшуємо відступ зверху для опускання тексту */
+    position: absolute; /* Робимо текст абсолютним, щоб він не рухався з іншими елементами */
+    top: 1650px; /* Контролюємо відстань від верхнього краю */
+}
+
+/* Кольорові частини тексту */
+.belief-text .belief-text-white {
+    color: white;
+}
+
+.belief-text .belief-text-yellow {
+    color: #FEEF41; /* Жовтий */
+}
+
+/* Прозорий текст "Я ВІРЮ" з обведенням */
+.opacity-belief-text {
+    font-family: 'Benzin', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    color: transparent; 
+    -webkit-text-stroke: 1px white; 
+    text-align: left;
+    opacity: 0.1;
+    margin-top: 20px; 
+    display: inline-block;
+    position: absolute; 
+    top: 1690px; 
+    left: 130px; 
+}
+
+
+.sub-text {
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    text-align: left; 
+    margin-top: 420px; 
+    margin-left: 0px; 
+    line-height: 1.6;
+    max-width: 80%;
+}
+
+.start-btn {
+    position: absolute;
+    top: 213%; 
+    left: 12%;
+    transform: translateX(-50%);
+    background-color: #e1d300; 
+    color: black; 
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 27px 47px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 0; 
+    transition: background-color 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1.5px;
+}
+
+.start-btn:hover {
+    background-color: white; 
+}
+
+.third-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.third-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1200px; 
+    height: 100vh;
+}
+
+.for-whom-text {
+    font-family: 'Benzin', sans-serif;
+    font-size: 248px; 
+    font-weight: 700;
+    text-align: center;
+    color: white; 
+}
+
+.white-text {
+    color: white; 
+}
+
+.yellow-text {
+    color: #e1d300; 
+}
+
+.four-blocks {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: -300px; 
+    gap: 40px; 
+    padding: 0 100px; 
+}
+
+.four-blocks .block h3 {
+    font-family: 'Benzin', sans-serif; 
+    font-weight: 700; 
+    font-size: 50px; 
+    color: black; 
+    text-align: center;
+    line-height: 1;
+}
+
+.four-blocks .block p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600; 
+    font-size: 18px; 
+    color: black; 
+}
+
+
+.block {
+    width: 390px;
+    height: 370px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-block {
+    background-color: white; 
+    color: black; 
+}
+
+.white-block h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.white-block p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.yellow-block {
+    background-color: #e1d300; 
+    color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.yellow-block button {
+    
+    font-size: 18px;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.yellow-block button:hover {
+    background-color: #d3c100;
+}
+
+.yellow-block {
+    background-color: #e1d300; 
+    color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    height: 390px;
+    width: 390px; 
+}
+
+.yellow-block button {
+    font-family: 'Benzin', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1;
+    
+}
+
+.yellow-block button span {
+    display: block;
+    width: 100%;
+}
+
