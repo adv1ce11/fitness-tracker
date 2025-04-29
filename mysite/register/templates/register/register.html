@@ -34,10 +34,10 @@
             <h2 class="login-title">РЕЄСТРАЦІЯ</h2>
             <div class="login--menu">
                 <form class="login--form" id="registration-form">
-                    <input type="text" id="full-name" placeholder="Ваше Ім'я та прізвище" required>
+                    <input type="text" id="full-name" placeholder="Ваше Ім'я та прізвище"{{user.username}} required>
                     <input type="email" id="email" placeholder="Електронна пошта" required>
                     <input type="password" id="password" placeholder="Пароль" required>
-                    <button type="submit">Створити аккаунт</button>
+                    <button class="edit-btn" onclick="location.href='/login/login.html'">Створити Акаунт</button>
                 </form>
             </div>
             
