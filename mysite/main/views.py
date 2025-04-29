@@ -77,3 +77,7 @@ class ArticleCategoryList(ArticleList):
             category__slug__in=[self.kwargs['slug']]
         ).distinct()
         return articles
+
+
+def authenfication(request):
+    return render (request,'login/login.html')

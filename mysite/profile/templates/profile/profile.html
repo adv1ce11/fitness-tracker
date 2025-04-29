@@ -11,22 +11,22 @@
   <div class="profile-container">
     <div class="profile-header">
       <img src="{% static 'profile/images/avatar.jpg' %}" alt="{{ logo }}">
-      <h1 class="profile-name">Ім'я користувача</h1>
-      <p class="profile-email">email@example.com</p>
+      <h1 class="profile-name">{{user.username }}</h1>
+      <p class="profile-email">{{ user.email }}</p>
     </div>
 
     <div class="profile-details">
       <h2>Особисті дані</h2>
       <ul>
-        <li><strong>Дата народження:</strong> 1 січня 2000</li>
-        <li><strong>Місцезнаходження:</strong> Київ, Україна</li>
-        <li><strong>Телефон:</strong> +380123456789</li>
+        <li><strong>Прізвище та Ім'я:</strong>{{user.username}}</li>
+        <li><strong>Електронна пошта:</strong>{{user.email}}</li>
+        <li><strong>Пароль:</strong>{{user.password}}</li>
       </ul>
     </div>
 
     <div class="profile-actions">
-      <button class="edit-btn">Редагувати профіль</button>
-      <button class="logout-btn">Вийти</button>
+      <button class="edit-btn" onclick="location.href='/'">Повернутися на головну сторінку</button>
+      <button class="logout-btn" onclick="location.href='/login/login.html'">Вийти</button>
     </div>
   </div>
 </body>

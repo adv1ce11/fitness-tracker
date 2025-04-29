@@ -33,14 +33,14 @@
                 </div>
         </header>
         <div class="login-container">
-            <h2 class="login-title">МІЙ КАБІНЕТ</h2>
+            <h2 class="login-title">АВТОРИЗАЦІЯ</h2>
             
             <div class="login--menu">
-                <form class="login--form">
-                    <input type="email" id="email" placeholder="Електронна пошта" required>
+                <form class="login--form" action="/login/" method="post">
+                    {% csrf_token %} <input type="email" id="email" placeholder="Електронна пошта" required>
                     <input type="password" id="password" placeholder="Пароль" required>
                     <button type="submit">Увійти</button>
-                  </form>
+                </form>
              </div>
             
             <a href="#" class="forgot-password">Я НЕ ПАМ’ЯТАЮ СВІЙ ПАРОЛЬ</a>
