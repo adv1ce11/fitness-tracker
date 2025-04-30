@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesreg.css' %}">
+    <title>MusclesUP</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <img src="{% static 'images/logo.png' %}" alt="{{ logo }}">
+            <nav>
+                <ul>
+                    <li class="nav_text"><a href="/">ГОЛОВНА</a></li>
+                    <li class="nav_text"><a href="/">ПРО НАС</a></li>
+                    <li class="nav_text"><a href="/">ДЛЯ КОГО</a></li>
+                    <li class="nav_text"><a href="/users/login">МІЙ КАБІНЕТ</a></li>
+                    <li class="nav_btn"><a href="">РЕЄСТРАЦІЯ</a></li>
+                </ul>
+            </nav>
+            <div class="hero-container">
+                <div class="hero--section">
+                    <div class="hero--info">
+                        <h2 class="text-opacity">ЗРОБИ</h2>
+                        <h2 class="text-opacity">ЗРОБИ</h2>
+                        <h2 class="text-opacity">ЗРОБИ</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="login-container">
+            <h2 class="login-title">РЕЄСТРАЦІЯ</h2>
+            <div class="login--menu">
+                <form class="login--form" action="/users/register/" method="post">
+                    {% csrf_token %} 
+                    <input type="username" id="username" name="username" placeholder="Ім'я та прізвище" required>
+                    <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+                    <input type="password" id="password" name="password" placeholder="Пароль" required>
+                    <button type="submit">Зареєструватись</button>
+                </form>
+            
+            </div>
+            
+            <a href="/users/login/" class="forgot-password">У МЕНЕ ВЖЕ Є АККАУНТ | УВІЙТИ </a>
+        </div>
+    </div>
+
+    <!-- Підключаємо зовнішній JavaScript файл наприкінці -->
+</body>
+</html>

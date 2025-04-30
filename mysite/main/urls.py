@@ -14,6 +14,4 @@ name='articles-category-list'),
       path(r'articles/<year>/<month>/<day>/<slug>', ArticleDetail.as_view(),
 name='news-detail'),
 
-path('',views.authenfication, name="authenfication"),
-
 ]

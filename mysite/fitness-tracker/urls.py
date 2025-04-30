@@ -19,10 +19,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('users/', include(('users.urls', 'users'), namespace='users')),
     path('', include(('main.urls', 'main'), namespace='main')),
-    path('', include(('login.urls', 'login'), namespace='login')),
-    path('', include(('register.urls', 'register'), namespace='register')),
-    path('', include(('profile.urls', 'profile'), namespace='profile')),
     path('',include("django.contrib.auth.urls")),
     
 ]
