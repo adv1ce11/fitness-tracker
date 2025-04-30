@@ -688,11 +688,11 @@ ul li.nav_btn a {
 }
 
 .yellow-block button:hover {
-    background-color: #d3c100;
+    background-color: #c49b14;
 }
 
 .yellow-block {
-    background-color: #e1d300; 
+    background-color: #f3cd0f; 
     color: black; 
     display: flex;
     justify-content: center;
