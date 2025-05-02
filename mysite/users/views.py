@@ -58,3 +58,5 @@ def user_logout(request):
 
 def profile(request):
     return render(request, 'users/profile.html')
+def weight_profile(request):
+    return render(request, 'users/weight_profile.html')
