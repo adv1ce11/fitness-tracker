@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @font-face {
-    font-family: 'Benzin';
-    src: url('/fonts/Benzin-Bold.ttf') format('truetype');
+    font-family: 'Benzin-Bold.ttf';
+    src: url('./fonts/Benzin-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Benzin Bold';
-    src: url('/fonts/Benzin-ExtraBold.ttf') format('truetype');
+    font-family: 'Benzin-ExtraBold.ttf';
+    src: url('./fonts/Benzin-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
