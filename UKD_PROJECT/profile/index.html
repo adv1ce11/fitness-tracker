@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/ЛОГО.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+    <title>MusclesUP</title>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <img src="/images/logo.png" alt="" class="logo">
+                <nav>
+                    <ul>
+                        <li class="nav_text"><a href="/index.html">ГОЛОВНА</a></li>
+                        <li class="nav_text"><a href="#about">ПРО НАС</a></li>
+                        <li class="nav_text"><a href="#">ДЛЯ КОГО</a></li>
+                        <li class="active"><a href="/login/login.html">МІЙ КАБІНЕТ</a></li>
+                        <li class="nav_btn"><a href="/register/index.html">РЕЄСТРАЦІЯ</a></li>
+                    </ul>
+                </nav>
+                <div class="hero-container">
+                    <div class="hero--section">
+                          <div class="wrapper">
+                          <h1 class="myprofile_text">МІЙ КАБІНЕТ</h1>
+                          <div class="progress-static">
+                            <span class="progress-label">ПРОГРЕС</span>
+                            <span class="progress-percent">0%</span>
+                          </div>
+                          <div class="buttons-group">
+                            <a class="tab-button active" id="nutritionBtn" href="/profile/index.html">Харчування</a>
+                            <a class="tab-button" id="weightBtn" href="/weight_profile/index.html">Набір ваги</a>
+                        </div>
+                          
+                          <div class="meal-plan" id="mealPlan">
+                            <h2>ДНІ 1-5:</h2>
+                            <p><span class="meal-label">Сніданок:</span> Омлет із 2 яєць + тост із цільнозернового хліба + овочевий салат</p>
+                            <p><span class="meal-label">Обід:</span> Куряче філе (250&nbsp;г) + гречка (300&nbsp;г) + тушковані овочі</p>
+                            <p><span class="meal-label">Вечеря:</span> Салат із тунця + варене яйце + ½ авокадо</p>
+                          </div>
+                          <<!-- Фото страв -->
+                              <div class="images-container">
+                                <img id="mealPhotoLarge" src="/images/omlet.png" alt="Meal Photo 1" class="meal-photo-large">
+                                <img id="mealPhotoSmall" src="/images/grechka.png" alt="Meal Photo 2" class="meal-photo-small">
+                              </div>
+                              <div class="switch-buttons">
+                                <button class="prevBtn" id="prevBtn">←</button>
+                                <button class="nextBtn" id="nextBtn">→</button>
+                              </div>
+                        </div>
+                                                                    
+                    </div>
+                </div>
+        </header>
+      </div>
+      <script src="./index.js">
+        
+      </script>
+
+    </body>
+</html>

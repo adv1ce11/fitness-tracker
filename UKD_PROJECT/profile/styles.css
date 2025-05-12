@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@font-face {
+    font-family: 'Benzin';
+    src: url('/fonts/Benzin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Benzin Bold';
+    src: url('/fonts/Benzin-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Забороняємо виділення тексту */
+* {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
+
+img {
+    pointer-events: none; 
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+}   
+
+body {
+    font-family: "Benzin Bold", sans-serif;
+    font-weight: 700;
+        overflow-y: auto; 
+    background-color: black;
+    overflow: hidden;
+}
+
+.wrapper {
+    background-color: black;
+    height: 200vh; 
+}
+
+
+.container {
+    padding: 50px 0px;
+    width: 1680px;
+    margin: 0 auto;
+}
+
+
+header {
+    position: relative;
+    z-index: 10; 
+}
+header nav {
+    position: relative;
+    z-index: 11; 
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+    
+}
+
+/* Загальні стилі для всіх посилань */
+ul li a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    text-decoration: none; 
+    color: white;
+    font-size: 14px;
+}
+
+ul li a:hover {
+    color: #FEEF41;
+    font-weight: 700;
+}
+
+
+ul li.active a {
+    font-weight: 700; 
+}
+
+ul li.nav_btn a {
+    font-weight: 600; 
+    color: black;
+    letter-spacing: 5px; 
+    background-color: white;
+    padding: 25px 45px;
+    border-radius: 25px;
+}
+
+
+.myprofile_text {
+  font-family: "Benzin Bold", sans-serif;
+    padding-top: 100px;
+    font-weight: 700;
+    font-size: 86px;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    color: white;
+}
+
+.progress-static {
+  position: absolute;
+  top: 180px;
+  left: 1680px;
+  transform: translateX(-100%); /* Зсуває весь блок вліво */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.progress-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.progress-percent {
+  font-size: 85px;
+  line-height: 1;
+  color: yellow;
+}
+
+.buttons-group {
+  margin-top: 30px;       /* підніми/опусти за потреби */
+  display: flex;
+  gap: 20px;
+  position: relative;     /* якщо будуть позиціонуватись відносно свого місця */
+}
+
+.tab-button {
+  font-family: 'Inter', sans-serif;
+  padding: 25px 70px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+  background-color: #101010; /* Сірий */
+}
+
+.tab-button.active {
+  background-color: #FEEF41; /* Жовтий */
+  color: black;
+}
+
+.switch-buttons {
+  margin-top: -50px;
+  display: flex;
+  gap: 10px;
+}
+
+.switch-buttons button {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.switch-buttons button:hover {
+  background-color: #FEEF41;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center; /* або center */
+  gap: 40px;
+  margin-top: -420px;
+  margin-left: 900px;
+}
+
+
+
+.meal-photo-large {
+  margin-top: 110px;
+  width: 400px;
+  height: 400px;
+}
+
+.meal-photo-small {
+  margin-top: 210px;
+  width: 300px;
+  height:300px;
+}
+
+.meal-plan {
+  margin-top: 90px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 21px;
+  text-align: left;
+  color: white;
+}
+
+.meal-plan h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 46px;
+  margin-bottom: 16px;
+}
+
+.meal-plan p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.meal-label {
+  color: #FEEF41;
+  font-weight: 600;
+}
+
+
+.tab-button {
+  text-decoration: none;
+}

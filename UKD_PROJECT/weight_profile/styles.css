@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@font-face {
+    font-family: 'Benzin';
+    src: url('/fonts/Benzin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Benzin Bold';
+    src: url('/fonts/Benzin-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Забороняємо виділення тексту */
+* {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
+
+img {
+    pointer-events: none; 
+}
+
+html {
+    
+    height: 100%;
+}   
+
+body {
+    font-family: "Benzin Bold", sans-serif;
+    font-weight: 700;
+    
+    overflow-y: auto; 
+    background-color: black;
+    
+}
+
+.wrapper {
+    background-color: black;
+    height: 200vh; 
+}
+
+
+.container {
+    padding: 50px 0px;
+    width: 1680px;
+    margin: 0 auto;
+}
+
+
+header {
+    position: relative;
+    z-index: 10; 
+}
+header nav {
+    position: relative;
+    z-index: 11; 
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+    
+}
+
+/* Загальні стилі для всіх посилань */
+ul li a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    text-decoration: none; 
+    color: white;
+    font-size: 14px;
+}
+
+ul li a:hover {
+    color: #FEEF41;
+    font-weight: 700;
+}
+
+
+ul li.active a {
+    font-weight: 700; 
+}
+
+ul li.nav_btn a {
+    font-weight: 600; 
+    color: black;
+    letter-spacing: 5px; 
+    background-color: white;
+    padding: 25px 45px;
+    border-radius: 25px;
+}
+
+
+.myprofile_text {
+  font-family: "Benzin Bold", sans-serif;
+    padding-top: 100px;
+    font-weight: 700;
+    font-size: 86px;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    color: white;
+}
+
+.progress-static {
+  position: absolute;
+  top: 180px;
+  left: 1680px;
+  transform: translateX(-100%); /* Зсуває весь блок вліво */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.progress-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.progress-percent {
+  font-size: 85px;
+  line-height: 1;
+  color: yellow;
+}
+
+.buttons-group {
+  margin-top: 30px;       /* підніми/опусти за потреби */
+  display: flex;
+  gap: 20px;
+  position: relative;     /* якщо будуть позиціонуватись відносно свого місця */
+}
+
+.tab-button {
+  font-family: 'Inter', sans-serif;
+  padding: 25px 70px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+  background-color: #101010; /* Сірий */
+}
+
+.tab-button.active {
+  background-color: #FEEF41; /* Жовтий */
+  color: black;
+}
+
+.lessons-group {
+  color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    padding-top: 30px;
+  }
+  
+  .highlight {
+      color: yellow;
+    }
+    
+  .normal {
+      color: white;
+    }
+
+    .blocks-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin-top: 30px;
+      overflow-x: auto;
+  }
+  
+  .blocks-container.second-row {
+      margin-top: 20px; /* Додаємо відступ між рядами */
+  }
+  
+  .yellow-block {
+      background-color: #FEEF41; /* Жовтий */
+      color: #101010; /* Чорний колір тексту */
+      padding: 15px;
+      border-radius: 10px;
+      width: 320px;
+      height: 320px;
+      text-align: left;
+      position: relative;
+  }
+  
+  .dark-block {
+      background-color: #101010; /* Темно-сірий */
+      color: white; /* Білий колір тексту */
+      padding: 15px;
+      border-radius: 10px;
+      width: 320px;
+      height: 320px;
+      text-align: left;
+      position: relative;
+  }
+  
+  .dark-block .main-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-left: 10px;
+      color: white; /* Білий колір тексту для темних плашок */
+  }
+  
+  .dark-block .info-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-left: 10px;
+      color: white; /* Білий колір тексту для темних плашок */
+  }
+  
+  .main-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-left: 10px;
+  }
+  
+  .info-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-left: 10px;
+  }
+  
+  .gif-button {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      cursor: pointer;
+      padding: 0;
+  }
+  
+  .gif-button:focus {
+      outline: none;
+  }
+  
+  .arrow {
+      width: 15px;
+      height: 15px;
+      border-top: 5px solid white;
+      border-right: 5px solid white;
+      transform: rotate(45deg);
+  }
+  
+  #gif-container {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+  }
+  
+  #gif-image {
+      max-width: 90vw;
+      max-height: 90vh;
+      display: block;
+  }
+  
+  #close-gif {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 2em;
+      line-height: 1;
+      padding: 0;
+      margin: 0;
+      z-index: 1001;
+  }
+
+  .tab-button {
+    text-decoration: none;
+  }

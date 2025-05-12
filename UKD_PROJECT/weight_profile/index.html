@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/ЛОГО.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+    <title>MusclesUP</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <img src="/images/logo.png" alt="" class="logo">
+                <nav>
+                    <ul>
+                        <li class="nav_text"><a href="/index.html">ГОЛОВНА</a></li>
+                        <li class="nav_text"><a href="#about">ПРО НАС</a></li>
+                        <li class="nav_text"><a href="">ДЛЯ КОГО</a></li>
+                        <li class="active"><a href="/login/login.html">МІЙ КАБІНЕТ</a></li>
+                        <li class="nav_btn"><a href="/register/index.html">РЕЄСТРАЦІЯ</a></li>
+                    </ul>
+                </nav>
+                <div class="hero-container">
+                    <div class="hero--section">
+                        <div class="wrapper">
+                        <h1 class="myprofile_text">МІЙ КАБІНЕТ</h1>
+                        <div class="progress-static">
+                            <span class="progress-label">ПРОГРЕС</span>
+                            <span class="progress-percent">0%</span>
+                        </div>
+                        <div class="buttons-group">
+                          <a class="tab-button" id="nutritionBtn" href="/profile/index.html">Харчування</a>
+                          <a class="tab-button active" id="weightBtn" href="weight.html">Набір ваги</a>
+                      </div>
+                        <div class="lessons-group">
+                          <h2>
+                              <span style="color: yellow;">Тренування A</span> –
+                              <span style="color: white;">Груди, плечі,<br> трицепс(Понеділок):</span>
+                          </h2>
+                      </div>
+                      <div class="blocks-container">
+                          <div class="yellow-block active-block" data-gif-url="https://i.giphy.com/cKPsQVloxwsPgbpamd.webp">
+                              <p class="main-text">ЖИМ ШТАНГИ <br> ЛЕЖАЧИ</p>
+                              <div class="info-container">
+                                  <p class="info-text">ПІДХОДИ: <span class="sets">4</span></p>
+                                  <p class="info-text">КІЛЬКІСТЬ ПОВТОРЕНЬ: <span class="reps">6-8</span></p>
+                              </div>
+                              <button class="gif-button">
+                                  <div class="arrow"></div>
+                              </button>
+                          </div>
+                          <div class="dark-block inactive-block" data-gif-url="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHI5dmpmeTZkdm92dGo4dThndDBhNnlzMjJ2eXRoaWE1ZjlienNhOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3Sgs9b2VJfOIQ0WoUg/giphy.gif">
+                              <p class="main-text">ЖИМ ГАНТЕЛЕЙ <br> НА ЛАВЦІ</p>
+                              <div class="info-container" style="display: none;">
+                                  <p class="info-text">ПІДХОДИ: <span class="sets">3</span></p>
+                                  <p class="info-text">КІЛЬКІСТЬ ПОВТОРЕНЬ: <span class="reps">10-12</span></p>
+                              </div>
+                              <button class="gif-button" style="display: none;">
+                                  <div class="arrow"></div>
+                              </button>
+                          </div>
+                          <div class="dark-block inactive-block" data-gif-url="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHM4ZjR5dzJpaGR5YXlncGNrYnAweHc4YWpscXA5enptMnphMGVuMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mkzzJZXQcUZ9SnuKmS/giphy.gif">
+                              <p class="main-text">РОЗВЕДЕННЯ <br> ГАНТЕЛЕЙ</p>
+                              <div class="info-container" style="display: none;">
+                                  <p class="info-text">ПІДХОДИ: <span class="sets">3</span></p>
+                                  <p class="info-text">КІЛЬКІСТЬ ПОВТОРЕНЬ: <span class="reps">8-10</span></p>
+                              </div>
+                              <button class="gif-button" style="display: none;">
+                                  <div class="arrow"></div>
+                              </button>
+                          </div>
+                          <div class="dark-block inactive-block" data-gif-url="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzU5cWxuY21ibmw1bjBtbHBnNHZ3NWpmYWt2anU4MGxqejdtYjNreiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7lugb7ObGYiXe/giphy.gif">
+                              <p class="main-text">ЖИМ ГАНТЕЛЯМИ <br> НАД ГОЛОВОЮ</p>
+                              <div class="info-container" style="display: none;">
+                                  <p class="info-text">ПІДХОДИ: <span class="sets">4</span></p>
+                                  <p class="info-text">КІЛЬКІСТЬ ПОВТОРЕНЬ: <span class="reps">12-15</span></p>
+                              </div>
+                              <button class="gif-button" style="display: none;">
+                                  <div class="arrow"></div>
+                              </button>
+                          </div>
+                          <div class="dark-block inactive-block" data-gif-url="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3ByZHo3YzV1ZXg4MXc1YnFuY2Y2OG5kMHVpNjEwaXM1eHBlMXQ4YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z0EHpiBVAMVguvqcia/giphy.gif">
+                              <p class="main-text">ВІДЖИМАННЯ <br> НА БРУСАХ</p>
+                              <div class="info-container" style="display: none;">
+                                  <p class="info-text">ПІДХОДИ: <span class="sets">3</span></p>
+                                  <p class="info-text">КІЛЬКІСТЬ ПОВТОРЕНЬ: <span class="reps">10-12</span></p>
+                              </div>
+                              <button class="gif-button" style="display: none;">
+                                  <div class="arrow"></div>
+                              </button>
+                          </div>
+                      </div>
+                      <div id="gif-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;">
+                          <img id="gif-image" src="" alt="GIF">
+                          <button id="close-gif" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; cursor: pointer; font-size: 2em; line-height: 1; padding: 0; margin: 0; z-index: 1001;">×</button>
+                      </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <script src="./index.js">
+      
+    </script>
+
+</body>
+</html>
